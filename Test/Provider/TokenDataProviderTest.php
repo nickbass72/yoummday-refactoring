@@ -14,7 +14,10 @@ class TokenDataProviderTest extends TestCase
         $dataProvider = new TokenDataProvider();
 
         $this->assertSame(
-            [['token' => 'token1234', 'permissions' => ['read', 'write']]],
+            [
+                ['token' => 'token1234', 'permissions' => ['read', 'write']],
+                ['token' => 'tokenReadonly', 'permissions' => ['read']],
+            ],
             $dataProvider->getTokens()
         );
     }
