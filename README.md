@@ -1,3 +1,7 @@
+# Yoummday Refactoring Task
+This project only includes the route `GET /has_permission/{token}` which has to decide if the provided token exists and has the required permission.
+Your task is to refactor the endpoint and create tests, if necessary.
+
 # Requirements
 - php 8.1
 - composer
