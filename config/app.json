@@ -3,7 +3,7 @@
   "port": 1337,
   "public_dir": "public",
   "routing": {
-    "cache": "route.cache"
+    "cache": "../var/route.cache"
   },
-  "handlers": "App/Handler"
+  "handlers": "App/Controller"
 }

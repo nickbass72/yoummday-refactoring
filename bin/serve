@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use App\Application;
+
+const PROJECT_PATH = __DIR__ . '/../src';
+
+$rootDir = dirname(__DIR__);
+require_once realpath($rootDir . '/vendor/autoload.php');
+
+$app = new Application([
+    $rootDir . '/config/app.json',
+    $rootDir . '/config/tokens.json',
+]);
+
+return $app->run();
