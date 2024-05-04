@@ -33,17 +33,12 @@ class InMemoryTokenProvider implements TokenProviderInterface
         return $this->tokens;
     }
 
-    /**
-     * @param string $tokenId
-     * @return Token
-     * @throws TokenProviderException
-     */
     public function get(string $tokenId): Token
     {
         if (array_key_exists($tokenId, $this->tokens)) {
             return $this->tokens[$tokenId];
         }
 
-        throw new TokenProviderException(sprintf('Token "%s" not found.', $tokenId));
+        throw new TokenProviderException(sprintf('Token "%s" not found', $tokenId));
     }
 }

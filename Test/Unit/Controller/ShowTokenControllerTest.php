@@ -100,7 +100,7 @@ class ShowTokenControllerTest extends TestCase
                 'expectedResponse' => new JSONResponse($normalizedToken, 200),
             ],
             'token not found' => [
-                'providerResult' => new TokenProviderException(),
+                'providerResult' => new TokenProviderException('Token "1234" not found'),
                 'routeParameters' => new RouteParameters(['token' => '1234']),
                 'normalizedToken' => [],
                 'expectedResponse' => new JSONResponse(

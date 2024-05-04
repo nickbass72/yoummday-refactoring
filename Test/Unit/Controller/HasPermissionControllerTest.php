@@ -102,7 +102,7 @@ class HasPermissionControllerTest extends TestCase
                 ),
             ],
             'token not found' => [
-                'providerResult' => new TokenProviderException(),
+                'providerResult' => new TokenProviderException('Token "1234" not found'),
                 'routeParameters' => new RouteParameters([
                     'token' => '1234',
                     'permission' => Permission::READ->value,

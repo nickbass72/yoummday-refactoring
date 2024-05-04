@@ -36,7 +36,7 @@ class HasPermissionController implements HandlerInterface
         try {
             $token = $this->tokenProvider->get($tokenParam);
         } catch (TokenProviderException $exception) {
-            return new JSONResponse(['error' => sprintf('Token "%s" not found', $tokenParam)], 404);
+            return new JSONResponse(['error' => $exception->getMessage()], 404);
         }
 
         return new JSONResponse([
